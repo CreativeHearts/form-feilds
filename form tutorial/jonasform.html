@@ -1,0 +1,159 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonas form</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 3rem;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-family: "Rubik", sans-serif;
+      }
+
+      .cta-form label {
+        display: block;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .cta-form input,
+      select {
+        font-family: inherit;
+        padding: 1rem;
+        /* width: 50%; */
+        border-radius: 4px;
+        font-size: 2rem;
+        box-shadow: 0 2px 3px #aaa;
+        /* border: none; */
+      }
+
+      .cta-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-family: "Rubik", sans-serif;
+        margin-top: 14rem;
+        row-gap: 3rem;
+        padding: 4rem;
+        border-radius: 9px;
+        background-color: rgba(0, 0, 255, 0.335);
+      }
+
+      .gender-flex {
+        width: 50%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gender input[type="radio"] {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 2rem;
+        padding: 2rem;
+        color: blue;
+      }
+
+      .gender label {
+        display: inline-block;
+        /* background-color: #ddd;
+        padding: 4px 6px; */
+      }
+
+      .gender {
+        /* width: 50%; */
+      }
+
+      .gender-h {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .cta-form .btn {
+        /* border: none; */
+        width: 40%;
+        /* height: 60%; */
+        font-size: 2rem;
+        font-family: "Rubik", sans-serif;
+        padding: 1.5rem 2rem;
+        border-radius: 8px;
+      }
+    </style>
+
+    <section class="container">
+      <form class="cta-form" action="#">
+        <div>
+          <label for="me">Full name</label>
+          <input id="me" type="text" placeholder="Heart omodiagbe" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="omodiagbe@gmail.com"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="select">Where did you hear us?</label>
+          <select name="" id="select" required>
+            <option value="">Please chose one</option>
+            <option value="friends">friends and family</option>
+            <option value="YouTube">YouTube</option>
+            <option value="Face-book">Face-book</option>
+            <option value="Tweeter">Tweeter</option>
+          </select>
+        </div>
+
+        <div class="gender">
+          <div class="gender-h">Gender</div>
+          <div class="gender-flex">
+            <div class="set">
+              <label for="male">Male</label>
+              <input type="radio" name="Gender" id="age" />
+            </div>
+            <div>
+              <label for="female">Female</label>
+              <input type="radio" name="Gender" id="age" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="age">Age</label>
+          <input type="number" name="age" id="age" min="1" max="200" step="2" />
+        </div>
+
+        <div>
+          <label for="hubby">What is your Hubby </label>
+          <select name="" id="hubby">
+            <option value="">Please pick one</option>
+            <option value="chess">Play Chess</option>
+            <option value="code">Coding</option>
+            <option value="sky-dive">Sky diving</option>
+            <option value="read">Read Books</option>
+          </select>
+        </div>
+        <button class="btn">Sign up</button>
+      </form>
+    </section>
+  </body>
+</html>
